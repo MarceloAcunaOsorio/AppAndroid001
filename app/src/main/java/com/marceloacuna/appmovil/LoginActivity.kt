@@ -1,8 +1,10 @@
 package com.marceloacuna.appmovil
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +27,7 @@ class LoginActivity : AppCompatActivity() {
         val usernametext: EditText = findViewById(R.id.editTextTextEmailAddress)
         val passwordtext: EditText = findViewById(R.id.editTextTextPassword)
         val loginButton: Button = findViewById(R.id.buttonLogin)
+        val textregister: TextView = findViewById(R.id.textRegistrarse)
 
 
         //accion del boton
@@ -33,6 +36,13 @@ class LoginActivity : AppCompatActivity() {
             val passwordusuario = passwordtext.text.toString()
 
             Toast.makeText(this, "Nombre de Usuario: $nombreusuario\nContraseña : $passwordusuario ", Toast.LENGTH_SHORT).show()
+        }
+
+        //redirigir a la ventana Registrar
+
+        textregister.setOnClickListener{
+            val intent = Intent(this,RegistrarActivity::class.java)
+            startActivity(intent)
         }
     }
 }

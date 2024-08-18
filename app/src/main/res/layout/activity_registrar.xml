@@ -8,22 +8,22 @@
     tools:context=".RegistrarActivity">
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/TxtEmail"
         android:layout_width="321dp"
         android:layout_height="45dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/custom_edittext"
+        android:drawableLeft="@drawable/baseline_email_24"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        android:padding="8dp"
-        android:drawableLeft="@drawable/baseline_email_24"/>
+        app:layout_constraintTop_toBottomOf="@+id/txtnombreUsuario" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/TxtPassword"
         android:layout_width="321dp"
         android:layout_height="45dp"
         android:layout_marginTop="12dp"
@@ -35,76 +35,90 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
+        app:layout_constraintTop_toBottomOf="@+id/TxtEmail" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/TxtPassword2"
         android:layout_width="321dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:background="@drawable/custom_edittext"
         android:inputType="textPassword"
-        android:hint="Ingrese Password"
+        android:hint="Confirmar Password"
         android:padding="8dp"
         android:drawableLeft="@drawable/baseline_enhanced_encryption_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/TxtPassword" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/TextBirthDate"
         android:layout_width="321dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
+        android:focusable="false"
         android:ems="10"
         android:hint="Fecha de Nacimiento"
-        android:inputType="date"
         android:background="@drawable/custom_edittext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3"
+        app:layout_constraintTop_toBottomOf="@+id/TxtPassword2"
         android:drawableLeft="@drawable/baseline_calendar_24"
         android:padding="8dp"/>
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/txtnombreUsuario"
         android:layout_width="321dp"
         android:layout_height="45dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/custom_edittext"
+        android:drawableLeft="@drawable/baseline_account_circle_24"
         android:ems="10"
         android:hint="Nombre Completo"
         android:inputType="text"
+
+
+        android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:drawableLeft="@drawable/baseline_account_circle_24"
-        android:padding="8dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView_logo" />
 
     <Button
         android:id="@+id/buttonRegistrar"
         android:layout_width="277dp"
         android:layout_height="61dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:text="Registrarse"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+        app:layout_constraintTop_toBottomOf="@+id/TextBirthDate" />
 
     <ImageView
         android:id="@+id/imageView_logo"
         android:layout_width="186dp"
         android:layout_height="122dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.453"
         app:srcCompat="@mipmap/ic_icono" />
+
+    <TextView
+        android:id="@+id/textLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Volver al Login"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegistrar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
