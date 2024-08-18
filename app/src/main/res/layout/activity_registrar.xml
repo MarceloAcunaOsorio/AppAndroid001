@@ -9,21 +9,29 @@
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="321dp"
+        android:layout_height="45dp"
         android:layout_marginTop="12dp"
+        android:background="@drawable/custom_edittext"
         android:ems="10"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+        android:padding="8dp"
+        android:drawableLeft="@drawable/baseline_email_24"/>
 
     <EditText
         android:id="@+id/editTextTextPassword2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="321dp"
+        android:layout_height="45dp"
         android:layout_marginTop="12dp"
         android:ems="10"
+        android:hint="Password"
+        android:drawableLeft="@drawable/baseline_enhanced_encryption_24"
+        android:background="@drawable/custom_edittext"
+        android:padding="8dp"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,45 +39,56 @@
 
     <EditText
         android:id="@+id/editTextTextPassword3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="321dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:background="@drawable/custom_edittext"
         android:inputType="textPassword"
+        android:hint="Ingrese Password"
+        android:padding="8dp"
+        android:drawableLeft="@drawable/baseline_enhanced_encryption_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
     <EditText
         android:id="@+id/editTextDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="321dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:hint="Fecha de Nacimiento"
         android:inputType="date"
+        android:background="@drawable/custom_edittext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3"
+        android:drawableLeft="@drawable/baseline_calendar_24"
+        android:padding="8dp"/>
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="196dp"
+        android:layout_width="321dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="224dp"
+        android:background="@drawable/custom_edittext"
         android:ems="10"
+        android:hint="Nombre Completo"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawableLeft="@drawable/baseline_account_circle_24"
+        android:padding="8dp"/>
 
     <Button
         android:id="@+id/buttonRegistrar"
-        android:layout_width="223dp"
-        android:layout_height="49dp"
+        android:layout_width="277dp"
+        android:layout_height="61dp"
         android:layout_marginTop="40dp"
-        android:text="Button"
+        android:text="Registrarse"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
@@ -84,9 +103,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.775"
+        app:layout_constraintVertical_bias="0.453"
         app:srcCompat="@mipmap/ic_icono" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
