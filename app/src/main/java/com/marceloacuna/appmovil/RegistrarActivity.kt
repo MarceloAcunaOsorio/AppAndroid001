@@ -100,35 +100,54 @@ class RegistrarActivity : AppCompatActivity() {
             val userType = object : TypeToken<MutableList<User>>(){}.type
 
 
-            if(password == password2)
-
+            if(username != null && username.length >3 && username.length <=20)
             {
-            val users: MutableList<User> = if(userJson != null){
-                gson.fromJson(userJson,userType)
-            }else
-            {
-                mutableListOf()
-            }
-            users.add(newUser)
+                if( email != null && email.length >3 && email.length <=20)
+                {
+                    if(password != null && password.length >4 && password.length <15 )
+                    {
+                        if(password == password2 && password2 != null && password2.length >4 && password2.length <15 )
+                        {
 
-            val newUserJson = gson.toJson(users)
-            editor.putString("users",newUserJson)
-            editor.apply()
 
-            Toast.makeText(this,"Registro Exitoso", Toast.LENGTH_LONG).show()
+                                val users: MutableList<User> = if(userJson != null){
+                                    gson.fromJson(userJson,userType)
+                                }else
+                                {
+                                    mutableListOf()
+                                }
+                                users.add(newUser)
 
-                //ver registro de usuario
-                Log.d("UserList",users.joinToString ( "\n" ){user ->
-                    "UserName: ${user.username},Email ${user.email} ,Fecha Cumpleaños : ${user.birtDate}"
-                })
+                                val newUserJson = gson.toJson(users)
+                                editor.putString("users",newUserJson)
+                                editor.apply()
+
+                                Toast.makeText(this,"Registro Exitoso", Toast.LENGTH_LONG).show()
+
+                                    //ver registro de usuario
+                                    Log.d("UserList",users.joinToString ( "\n" ){user ->
+                                        "UserName: ${user.username},Email ${user.email} ,Fecha Cumpleaños : ${user.birtDate}"
+                                    })
+                        }
+                        else
+                        {
+                            Toast.makeText(this, "Claves no coinciden", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    else
+                    {
+                        Toast.makeText(this, "Ingrese una Clave Valida", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                else
+                {
+                    Toast.makeText(this, "Ingrese un Email Valido", Toast.LENGTH_SHORT).show()
+                }
             }
             else
             {
-                Toast.makeText(this, "Claves no son iguales", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Ingrese un nombre valido", Toast.LENGTH_SHORT).show()
             }
-
-
-
         }
         
     }

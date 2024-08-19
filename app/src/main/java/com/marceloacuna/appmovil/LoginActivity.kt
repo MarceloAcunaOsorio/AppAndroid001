@@ -31,15 +31,32 @@ class LoginActivity : AppCompatActivity() {
 
 
         //accion del boton
+
+
+
         loginButton.setOnClickListener{
             val nombreusuario = usernametext.text.toString()
             val passwordusuario = passwordtext.text.toString()
 
-            Toast.makeText(this, "Nombre de Usuario: $nombreusuario\nContraseña : $passwordusuario ", Toast.LENGTH_SHORT).show()
+            if(nombreusuario != ""  && nombreusuario != null)
+            {
+                if(passwordusuario != "" && passwordusuario != null)
+                {
+                   Toast.makeText(this, "Nombre de Usuario: $nombreusuario\nContraseña : $passwordusuario ", Toast.LENGTH_SHORT).show()
+                }
+                else
+                {
+                    Toast.makeText(this, "Ingrese su Contraseña ", Toast.LENGTH_SHORT).show()
+                }
+            }
+            else
+            {
+                Toast.makeText(this, "Ingrese su Email ", Toast.LENGTH_SHORT).show()
+            }
         }
 
-        //redirigir a la ventana Registrar
 
+        //redirigir a la ventana Registrar
         textregister.setOnClickListener{
             val intent = Intent(this,RegistrarActivity::class.java)
             startActivity(intent)
